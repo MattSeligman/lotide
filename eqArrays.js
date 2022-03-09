@@ -43,3 +43,4 @@ const eqArrays = function(arrayOne, arrayTwo) {
 eqArrays([1, 2, 3], [1, 2, 3]);
 eqArrays([1, 2, 3], [1, 2, 1]);
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+assertEqual(eqArrays([1, 2, 3], [1, 2, 1]), true); // => should FAIL

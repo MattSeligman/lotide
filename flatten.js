@@ -1,67 +1,67 @@
 const eqArrays = function(arrayOne, arrayTwo) {
   
-    const arrayOneLength = arrayOne.length;
-    const arrayTwoLength = arrayTwo.length;
+  const arrayOneLength = arrayOne.length;
+  const arrayTwoLength = arrayTwo.length;
   
-    let result = false;
+  let result = false;
           
-    // Check the Length of Arrays
-    if (arrayOneLength === arrayTwoLength) {
+  // Check the Length of Arrays
+  if (arrayOneLength === arrayTwoLength) {
       
-      for (let i = 0; i < arrayOneLength; i++) {
+    for (let i = 0; i < arrayOneLength; i++) {
       
-        if (arrayOne[i] === arrayTwo[i]) {
+      if (arrayOne[i] === arrayTwo[i]) {
                       
-          result = true;
-        } else {
-          result = false;
-        }
+        result = true;
+      } else {
+        result = false;
       }
-      
-    } else {
-      result = false;
     }
-    
-    return result;
       
-  };
-      
-  const assertArraysEqual = function(result) {
+  } else {
+    result = false;
+  }
     
-    const errorMsg = `🛑 The arrays are not equal 🛑`;
-    const successMsg = `✅ The arrays are Equal ✅`;
+  return result;
+      
+};
+      
+const assertArraysEqual = function(result) {
+    
+  const errorMsg = `🛑 The arrays are not equal 🛑`;
+  const successMsg = `✅ The arrays are Equal ✅`;
                 
-    if (result) {
-      console.log(successMsg);
-    } else {
-      console.log(errorMsg);
-    }
-  };
+  if (result) {
+    console.log(successMsg);
+  } else {
+    console.log(errorMsg);
+  }
+};
   
-  const flatten = function(array) {
+const flatten = function(array) {
 
-    let flattenedArray = [];
+  let flattenedArray = [];
 
-    for(let value in array) {
+  for (let value in array) {
 
-        if( !Array.isArray(array[value] ) ) {
+    if (!Array.isArray(array[value])) {
 
-            flattenedArray.push(array[value]);
+      flattenedArray.push(array[value]);
 
-        } else if( Array.isArray(array[value]) ) {
+    } else if (Array.isArray(array[value])) {
 
-            for(let subValue in array[value] ){
+      for (let subValue in array[value]) {
 
-                flattenedArray.push(array[value][subValue]);
-            }
+        flattenedArray.push(array[value][subValue]);
+      }
             
-        } 
-        
     }
-
-    return flattenedArray;
+        
   }
 
-flatten([1, 2, [3, 4], 5, [6]]) // => [1, 2, 3, 4, 5, 6]
+  return flattenedArray;
+};
 
-assertArraysEqual( eqArrays( flatten([1, 2, [3, 4], 5, [6]]) , [ 1, 2, 3, 4, 5, 6 ] ) ) //Test to Pass
+flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
+
+assertArraysEqual(eqArrays(flatten([1, 2, [3, 4], 5, [6]]) , [ 1, 2, 3, 4, 5, 6 ])); //Test to Pass

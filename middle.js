@@ -42,8 +42,6 @@ const assertArraysEqual = function(result) {
     console.log(errorMsg);
   }
 };
-
-console.log("=============================================");
   
 const middle = function(array) {
     

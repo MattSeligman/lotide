@@ -8,6 +8,8 @@ const eqArrays = function(arrayOne, arrayTwo) {
   // Check the Length of Arrays
   if (arrayOneLength === arrayTwoLength) {
 
+    if (arrayOneLength === 0) return true;
+
     for (let i = 0; i < arrayOneLength; i++) {
 
       if (arrayOne[i] === arrayTwo[i]) {

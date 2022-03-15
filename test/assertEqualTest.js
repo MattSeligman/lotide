@@ -3,5 +3,7 @@
 const assertEqual = require('../assertEqual');
 
 // TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
+console.log('\n assertEqual.js test---');
+assertEqual("Bootcamp", "Bootcamp");
+//assertEqual("Lighthouse Labs", "Bootcamp"); //Failure Test example
 assertEqual(1, 1);

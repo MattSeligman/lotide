@@ -26,12 +26,12 @@ const eqArrays = function(arrayOne, arrayTwo) {
       
 };
       
-const assertArraysEqual = function(result) {
+const assertArraysEqual = function(result, expectation) {
     
   const errorMsg = `🛑 The arrays are not equal 🛑`;
   const successMsg = `✅ The arrays are Equal ✅`;
                 
-  if (result) {
+  if (result, expectation) {
     console.log(successMsg);
   } else {
     console.log(errorMsg);
@@ -64,4 +64,4 @@ const flatten = function(array) {
 
 flatten([1, 2, [3, 4], 5, [6]]); // => [1, 2, 3, 4, 5, 6]
 
-assertArraysEqual(eqArrays(flatten([1, 2, [3, 4], 5, [6]]) , [ 1, 2, 3, 4, 5, 6 ])); //Test to Pass
+assertArraysEqual(eqArrays(flatten([1, 2, [3, 4], 5, [6]]) , [ 1, 2, 3, 4, 5, 6 ]), true); //Test to Pass

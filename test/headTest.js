@@ -3,7 +3,7 @@ const assert = require('chai').assert;
 const head   = require('../head');
 
 // TEST CODE
-describe("#1) assertEqual (chai) & head.js test", () => {
+describe("head.js test---", () => {
 
   it("returns 1 for [1, 2, 3]", () => {
     assert.strictEqual(head([1, 2, 3]), 1);

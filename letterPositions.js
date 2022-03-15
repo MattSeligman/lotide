@@ -1,45 +1,3 @@
-const eqArrays = function(arrayOne, arrayTwo) {
-  
-  const arrayOneLength = arrayOne.length;
-  const arrayTwoLength = arrayTwo.length;
-    
-  let result = false;
-        
-  // Check the Length of Arrays
-  if (arrayOneLength === arrayTwoLength) {
-    
-    for (let i = 0; i < arrayOneLength; i++) {
-    
-      if (arrayOne[i] === arrayTwo[i]) {
-                    
-        result = true;
-      } else {
-        result = false;
-      }
-    }
-    
-  } else {
-    result = false;
-  }
-  
-  return result;
-    
-};
-    
-
-const assertArraysEqual = function(result) {
-  
-  const errorMsg = `🛑 The arrays are not equal 🛑`;
-  const successMsg = `✅ The arrays are Equal ✅`;
-              
-  if (result) {
-    console.log(successMsg);
-  } else {
-    console.log(errorMsg);
-  }
-};
-
-
 const letterPositions = function(sentence) {
   const results = {};
   // logic to update results here
@@ -68,11 +26,14 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-letterPositions("test");
+module.exports = letterPositions;
 
-letterPositions("lighthouse in the house");
+// Tests to build
+// letterPositions("test");
 
-assertArraysEqual(eqArrays(
-  letterPositions("lighthouse in the house"),
-  { l: [0], i: [1, 11], g: [2], h: [3, 5, 15, 18], t: [4, 14], o: [6, 19], u: [7, 20], s: [8, 21], e: [9, 16, 22], n: [12] }
-));
+// letterPositions("lighthouse in the house");
+
+// assertArraysEqual(eqArrays(
+//   letterPositions("lighthouse in the house"),
+//   { l: [0], i: [1, 11], g: [2], h: [3, 5, 15, 18], t: [4, 14], o: [6, 19], u: [7, 20], s: [8, 21], e: [9, 16, 22], n: [12] }
+// ));

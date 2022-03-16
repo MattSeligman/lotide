@@ -1,30 +1,20 @@
+const flatten = require('./flatten');
+
 const eqArrays = function(arrayOne, arrayTwo) {
 
-  const arrayOneLength = arrayOne.length;
-  const arrayTwoLength = arrayTwo.length;
+  const firstArray = flatten(arrayOne);
+  const secondArray = flatten(arrayTwo);
+  const sameLength = arrayOne.length === arrayTwo.length;
 
-  let result = false;
-    
-  // Check the Length of Arrays
-  if (arrayOneLength === arrayTwoLength) {
-
-    if (arrayOneLength === 0) return true;
-
-    for (let i = 0; i < arrayOneLength; i++) {
-
-      if (arrayOne[i] === arrayTwo[i]) {
-                
-        result = true;
-      } else {
-        result = false;
-      }
-    }
-
-  } else {
-    result = false;
+  if (!sameLength) {
+    return false;
   }
-
-  return result;
+  
+  if (firstArray.join("") === secondArray.join("")) {
+    return true;
+  } else {
+    return false;
+  }
 
 };
 

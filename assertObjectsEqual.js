@@ -32,7 +32,7 @@ const eqObjects = function(object1, object2) {
         // check if exists out of order
       } else if (object2Keys.includes(object1Keys[key])) {
                   
-        return true;
+        result = true;
               
       } else {
         result = false;
@@ -47,9 +47,3 @@ const eqObjects = function(object1, object2) {
 };
 
 module.exports = eqObjects;
-
-// Test to build
-// assertObjectsEqual(
-//   eqObjects({a:1,b:2},{a:1,b:2}),
-//   false
-// );

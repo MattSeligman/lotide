@@ -1,9 +1,24 @@
 // test/assertEqualTest.js
-
+const assert = require('chai').assert;
 const assertEqual = require('../assertEqual');
 
 // TEST CODE
-console.log('\n assertEqual.js test---');
-assertEqual("Bootcamp", "Bootcamp");
-//assertEqual("Lighthouse Labs", "Bootcamp"); //Failure Test example
-assertEqual(1, 1);
+describe("assertEqual.js test---", () => {
+
+  it("Should return True 'Bootcamp' === 'Bootcamp", () => {
+    assert.isTrue(assertEqual("Bootcamp", "Bootcamp"));
+  });
+
+  it("Should return False 'Bootcamp!' === 'Bootcamp", () => {
+    assert.isFalse(assertEqual("Bootcamp!", "Bootcamp"));
+  });
+
+  it("Should return True 1 === 1", () => {
+    assert.isTrue(assertEqual(1,1));
+  });
+
+  it("Should return False 2 === 1", () => {
+    assert.isFalse(assertEqual(2,1));
+  });
+    
+});

@@ -1,10 +1,20 @@
 // test/eqArrays.js
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const eqArrays = require('../eqArrays');
 
 // TEST CODE
-console.log('\n assertEqual.js & eqArrays.js test---');
-eqArrays([1, 2, 3], [1, 2, 3]);
-eqArrays([1, 2, 3], [1, 2, 1]);
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-assertEqual(eqArrays([1, 2, 3], [1, 2, 1]), false); // => should FAIL
+describe("eqArrays.js test---", () => {
+
+  it("Should return True [1,2,3] === [1,2,3]", () => {
+    assert.isTrue(eqArrays([1, 2, 3], [1, 2, 3]));
+  });
+
+  it("Should return True (Recursive test) [1, [1,[2,3]], [3]] === [1, [1,[2,3]], [3]]", () => {
+    assert.isTrue(eqArrays([1, [1,[2,3]], [3]], [1, [1,[2,3]], [3]]));
+  });
+
+  it("Should return False [1,2,2] === [1,2,3]", () => {
+    assert.isFalse(eqArrays([1, 2, 2], [1, 2, 3]));
+  });
+    
+});

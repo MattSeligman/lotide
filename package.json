@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@mattseligman/lotide",
   "version": "1.0.0",
-  "description": "A toolkit built during Lighthouse Labs",
+  "description": "Lotide is a mini clone of the Lodash Library to practice crating a personal npm package. It's like lodash, but without all that extra stuff. Just the things you need to start your project.",
   "main": "index.js",
   "directories": {
     "test": "test"

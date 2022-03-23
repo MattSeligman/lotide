@@ -1,6 +1,6 @@
 # Lotide
 
-Lotide is a mini clone of the [Lodash](https://lodash.com) Library to practice crating a personal npm package. It's like lodash, but without all that extra stuff. Just the things you need to start your project. Lotide is my first package I ever published.
+Lotide is a mini clone of the [Lodash](https://lodash.com) Library to practice creating a personal npm package. It's like lodash, but without all that extra stuff. Just the things you need to start your project. Lotide is my first package I ever published.
 
 ## Purpose
 
